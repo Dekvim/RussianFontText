@@ -36,10 +36,6 @@ static void AddCodepointRange(Font *font, const char *fontPath, int start, int s
 {
     int rangeSize = stop - start + 1;
     int currentRangeSize = font->glyphCount;
-
-    // TODO: Load glyphs from provided vector font (if available),
-    // add them to existing font, regenerating font image and texture
-
     int updatedCodepointCount = currentRangeSize + rangeSize;
     int *updatedCodepoints = (int *)RL_CALLOC(updatedCodepointCount, sizeof(int));
 
